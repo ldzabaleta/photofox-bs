@@ -6,10 +6,6 @@ body {
 padding-top: 2rem;
 }
 
-.bg__gradient {
-  background: linear-gradient(rgb(59, 59, 59),rgb(199, 199, 199))
-}
-
 .line__pay {
   border-top: 1px;
   border-bottom: 1px;
@@ -29,7 +25,7 @@ padding-top: 2rem;
   padding-top: 1rem;
 }
 
-.icon-center {
+.icon__center {
   position: relative;
 left: 45%;
 -webkit-transform: translateX(-50%);
@@ -84,39 +80,6 @@ transform: translateX(-50%);
   }
 }
 
-/* Image Zoom Animation */
-.image__size {
-  width: auto;
-  height: auto;
-}
-.image__size--comoComprar {
-  width: 480px;
-  height: 473px;
-}
-
-.image{
-  background-color: rgba(0, 0, 0, 0.3);
-  outline: 0 solid;
-  outline-offset: -8px;
-  box-shadow: 3px 3px 10px
-  rgba(0, 0, 0, 0.003);
-  position: relative;
-  overflow: hidden;
-}
-
-.image__zoom{
-  position: relative;
-  inset: 0;
-  width: auto;
-  height: auto;
-  object-fit: cover;
-  opacity: .6;
-  transition: transform 2s;
- }
-.image:hover .image__zoom {
-  transform: scale(1.05);
-}
-
 /* Search Bar*/
 .form-control:focus {
   border-color: #000;
@@ -132,9 +95,9 @@ button {
   color: #FFFFFF;
   cursor: pointer;
   flex: 0 0 auto;
-  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
   line-height: 1.5rem;
   padding: .75rem 1.2rem;
   text-align: center;
