@@ -37,6 +37,12 @@ transform: translateX(-50%);
   font-size: 0.8rem;
 }
 
+.svg__size {
+  width: 50%;
+  height: 50%;
+  margin: 2rem;
+}
+
 /* Animated NAV */
 .list{
   list-style: none; 
@@ -78,6 +84,14 @@ transform: translateX(-50%);
   .pin__font--size {
     font-size: 1rem;
   }
+  .svg__size {
+    width: 40%;
+    height: 40%;
+    margin: 5rem;
+  }
+  button {
+    padding: .75rem 1.5rem;
+   }
 }
 
 /* Search Bar*/
@@ -121,8 +135,16 @@ button {
   outline-offset: 2px;
  }
  
- @media (min-width: 768px) {
-  button {
-   padding: .75rem 1.5rem;
-  }
+ /* Image Zoom Animation */
+
+.image{
+  position: relative;
+}
+
+.image__zoom{
+  position: relative;
+  transition: transform 2s;
  }
+.image:hover .image__zoom {
+  transform: scale(1.04);
+}
