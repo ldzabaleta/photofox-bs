@@ -103,6 +103,10 @@ transition: .5s;
    }
 }
 
+.navbar-light .navbar-toggler {
+  color: #FFFFFF;
+}
+
 /* Search Bar*/
 .form-control:focus {
   border-color: #000;
@@ -110,7 +114,7 @@ transition: .5s;
 }
 
 /* Boton Style */
-button {
+.int__button {
   background-color: #000000;
   border: 1px solid transparent;
   border-radius: .75rem;
@@ -134,11 +138,11 @@ button {
   width: auto;
  }
  
- button:hover {
+ .int__button:hover {
   background-color: #434343;
  }
  
- button:focus {
+ .int__button:focus {
   box-shadow: none;
   outline: 2px solid white;
   outline-offset: 2px;
