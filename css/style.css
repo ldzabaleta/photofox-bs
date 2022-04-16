@@ -43,6 +43,14 @@ transform: translateX(-50%);
   margin: 2rem;
 }
 
+.text-decoration-none {
+color: black;
+}
+
+.text-decoration-none:hover {
+  color: #434343;
+}
+
 /* Animated NAV */
 .list{
   list-style: none; 
@@ -134,6 +142,31 @@ button {
   outline: 2px solid white;
   outline-offset: 2px;
  }
+
+ .social__button {
+  background-color: #000000;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
  
  /* Image Zoom Animation */
 
@@ -147,4 +180,12 @@ button {
  }
 .image:hover .image__zoom {
   transform: scale(1.04);
+}
+
+.creditCard__zoom{
+  position: relative;
+  transition: transform 2s;
+ }
+.image:hover .creditCard__zoom {
+  transform: scale(1.25);
 }
