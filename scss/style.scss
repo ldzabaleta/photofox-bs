@@ -1,42 +1,6 @@
-* {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
-}
-
-.list {
-  list-style: none;
-  text-align: center;
-}
-
-.link {
-  display: inline-block;
-  margin-block: 2px;
-  text-decoration: none;
-  color: black;
-  position: relative;
-}
-
-.link::after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: black;
-  border-radius: 4px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: scaleX(0);
-  transition: transform 0.25s ease;
-}
-
-.link:hover::after {
-  transform: scaleX(1);
-}
-
-.navbar-light .navbar-toggler {
-  color: #ffffff;
-}
+@import "variables";
+@import "globales";
+@import "navbar";
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -52,7 +16,7 @@ body {
   border-left: 0px;
   border-right: 0px;
   border-style: solid;
-  border-color: rgb(176, 175, 175);
+  border-color: $linepay-color;
 }
 
 .divisor {
@@ -61,7 +25,7 @@ body {
   border-left: 0;
   border-right: 0;
   border-style: solid;
-  border-color: rgba(176, 175, 175, 0.205);
+  border-color: $divisor-color;
   padding-top: 1rem;
 }
 
@@ -84,12 +48,12 @@ body {
 }
 
 .text-decoration-none {
-  color: black;
+  color: $contrast-color;
   transition: 0.5s;
 }
 
 .text-decoration-none:hover {
-  color: #434343;
+  color: $hover-color;
 }
 
 /* Media Query for Line Pay */
@@ -100,23 +64,21 @@ body {
     border-left: 1px;
     border-right: 1px;
     border-style: solid;
-    border-color: rgb(176, 175, 175);
+    border-color: $linepay-color;
   }
-
   .pin__font--size {
     font-size: 1rem;
   }
-
   .svg__size {
     width: 40%;
     height: 40%;
     margin: 5rem;
   }
-
   button {
     padding: 0.75rem 1.5rem;
   }
 }
+
 /* Search Bar*/
 .form-control:focus {
   border-color: #000;
@@ -125,11 +87,11 @@ body {
 
 /* Boton Style */
 .int__button {
-  background-color: black;
+  background-color: $contrast-color;
   border: 1px solid transparent;
   border-radius: 0.75rem;
   box-sizing: border-box;
-  color: #ffffff;
+  color: $primary-color;
   cursor: pointer;
   flex: 0 0 auto;
   font-family: "Montserrat", sans-serif;
@@ -138,7 +100,7 @@ body {
   line-height: 1.5rem;
   padding: 0.75rem 1.2rem;
   text-align: center;
-  text-decoration: none black solid;
+  text-decoration: none $contrast-color solid;
   transition-duration: 0.2s;
   transition-property: background-color, border-color, color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -149,24 +111,25 @@ body {
 }
 
 .int__button:hover {
-  background-color: #434343;
+  background-color: $hover-color;
 }
 
 .int__button:focus {
   box-shadow: none;
-  outline: 2px solid #ffffff;
+  outline: 2px solid $primary-color;
   outline-offset: 2px;
 }
 
 /* Image Zoom Animation */
+
 .image {
   position: relative;
-}
-.image .image__zoom {
-  position: relative;
-  transition: transform 2s;
-}
 
+  .image__zoom {
+    position: relative;
+    transition: transform 2s;
+  }
+}
 .image:hover .image__zoom {
   transform: scale(1.04);
 }
@@ -175,9 +138,6 @@ body {
   position: relative;
   transition: transform 2s;
 }
-
 .image:hover .creditCard__zoom {
   transform: scale(1.25);
 }
-
-/*# sourceMappingURL=style.css.map */
