@@ -92,6 +92,28 @@ body {
   color: #434343;
 }
 
+/* Image Zoom Animation */
+.image {
+  position: relative;
+}
+.image .image__zoom {
+  position: relative;
+  transition: transform 2s;
+}
+
+.image:hover .image__zoom {
+  transform: scale(1.04);
+}
+
+.creditCard__zoom {
+  position: relative;
+  transition: transform 2s;
+}
+
+.image:hover .creditCard__zoom {
+  transform: scale(1.25);
+}
+
 /* Media Query for Line Pay */
 @media (min-width: 768px) {
   .line__pay {
@@ -156,28 +178,6 @@ body {
   box-shadow: none;
   outline: 2px solid #ffffff;
   outline-offset: 2px;
-}
-
-/* Image Zoom Animation */
-.image {
-  position: relative;
-}
-.image .image__zoom {
-  position: relative;
-  transition: transform 2s;
-}
-
-.image:hover .image__zoom {
-  transform: scale(1.04);
-}
-
-.creditCard__zoom {
-  position: relative;
-  transition: transform 2s;
-}
-
-.image:hover .creditCard__zoom {
-  transform: scale(1.25);
 }
 
 /*# sourceMappingURL=style.css.map */
