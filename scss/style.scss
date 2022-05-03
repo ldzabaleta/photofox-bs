@@ -1,7 +1,8 @@
 // imports
-@import "variables";
-@import "globales";
-@import "navbar";
+@import "../scss/base/variables";
+@import "../scss/base/globales";
+@import "../scss/base/navbar";
+@import "../scss/base/mixins";
 
 // font
 body {
@@ -34,7 +35,7 @@ body {
 
 // position & size
 .icon__center {
-  position: relative;
+  @include position(relative);
   left: 45%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -52,7 +53,7 @@ body {
 }
 
 .text-decoration-none {
-  color: $contrast-color;
+  color: $secondary;
   transition: 0.5s;
 }
 
@@ -63,10 +64,10 @@ body {
 // Images zoom animation
 
 .image {
-  position: relative;
+  @include position(relative);
 
   .image__zoom {
-    position: relative;
+    @include position(relative);
     transition: transform 2s;
   }
 }
@@ -75,8 +76,7 @@ body {
 }
 
 .creditCard__zoom {
-  position: relative;
-  transition: transform 2s;
+  @extend .image__zoom;
 }
 .image:hover .creditCard__zoom {
   transform: scale(1.25);
@@ -107,17 +107,17 @@ body {
 
 // Search Bar
 .form-control:focus {
-  border-color: #000;
-  box-shadow: 0 0 0 0 rgb(255, 255, 255);
+  border-color: $secondary;
+  box-shadow: 0 0 0 0 $primary;
 }
 
 // Button Style
 .int__button {
-  background-color: $contrast-color;
+  background-color: $secondary;
   border: 1px solid transparent;
   border-radius: 0.75rem;
   box-sizing: border-box;
-  color: $primary-color;
+  color: $primary;
   cursor: pointer;
   flex: 0 0 auto;
   font-family: "Montserrat", sans-serif;
@@ -126,7 +126,7 @@ body {
   line-height: 1.5rem;
   padding: 0.75rem 1.2rem;
   text-align: center;
-  text-decoration: none $contrast-color solid;
+  text-decoration: none $secondary solid;
   transition-duration: 0.2s;
   transition-property: background-color, border-color, color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -142,6 +142,10 @@ body {
 
 .int__button:focus {
   box-shadow: none;
-  outline: 2px solid $primary-color;
+  outline: 2px solid $primary;
   outline-offset: 2px;
+}
+
+h1 {
+  font-size: map-get($title, medium__title);
 }
