@@ -67,7 +67,7 @@ body {
   @include position(relative);
 
   .image__zoom {
-    @include position(relative);
+    @extend .image;
     transition: transform 2s;
   }
 }
@@ -77,6 +77,7 @@ body {
 
 .creditCard__zoom {
   @extend .image__zoom;
+
 }
 .image:hover .creditCard__zoom {
   transform: scale(1.25);

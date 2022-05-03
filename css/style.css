@@ -92,19 +92,18 @@ body {
   color: #434343;
 }
 
-.image {
+.image, .image .image__zoom, .image .creditCard__zoom {
   position: relative;
 }
 .image .image__zoom, .image .creditCard__zoom {
-  position: relative;
   transition: transform 2s;
 }
 
-.image:hover .image__zoom, .image:hover .creditCard__zoom {
+.image:hover .image__zoom, .image:hover .creditCard__zoom, .image .image__zoom:hover .image__zoom, .image .creditCard__zoom:hover .image__zoom, .image .image__zoom:hover .creditCard__zoom, .image .creditCard__zoom:hover .creditCard__zoom {
   transform: scale(1.04);
 }
 
-.image:hover .creditCard__zoom {
+.image:hover .creditCard__zoom, .image .image__zoom:hover .creditCard__zoom, .image .creditCard__zoom:hover .creditCard__zoom {
   transform: scale(1.25);
 }
 
